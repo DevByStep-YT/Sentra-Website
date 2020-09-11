@@ -1,0 +1,19 @@
+.recent-projects {
+  margin: 30px 0;
+
+  .grid-gallery {
+    @include grid(3, 20px);
+
+    @include xs {
+      grid-gap: 5px;
+    }
+
+    a:first-child {
+      grid-area: 1 / 1 / 3 / 3;
+    }
+
+    a:last-child {
+      grid-area: 3 / 2 / 3 / 4;
+    }
+  }
+}

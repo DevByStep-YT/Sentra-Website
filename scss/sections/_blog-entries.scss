@@ -1,0 +1,79 @@
+.blog-entries {
+  margin: 30px 0;
+
+  .blog-box {
+    background-color: #eeeeee;
+
+    .blog-tabs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      border-bottom: 7px solid $primary-color;
+
+      .blog-tab {
+        padding: 30px;
+        text-align: center;
+
+        &:hover {
+          color: $primary-color;
+          cursor: pointer;
+        }
+
+        &.active {
+          background-color: $primary-color;
+          color: #eeeeee;
+        }
+      }
+    }
+
+    .blog-items {
+      padding: 30px 40px;
+
+      @include xs {
+        padding: 10px 15px;
+      }
+
+      .tabcontent {
+        display: none;
+        animation: fade-in 1s;
+
+        &:first-child {
+          display: block;
+        }
+      }
+
+      .blog-item {
+        @include flex(flex-start, center);
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #cccccc;
+
+        img {
+          flex: 1;
+          margin-right: 20px;
+        }
+
+        &-info {
+          flex: 2;
+
+          h3 {
+            margin: 5px 0;
+          }
+
+          h4 {
+            margin: 5px 0;
+            color: #666666;
+          }
+
+          p {
+            margin: 20px 0;
+            color: #aaaaaa;
+          }
+
+          .btn {
+            @include btn(md, $primary-color, #eeeeee);
+          }
+        }
+      }
+    }
+  }
+}

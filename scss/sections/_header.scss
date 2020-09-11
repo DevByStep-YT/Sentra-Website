@@ -1,0 +1,129 @@
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .menu-toggle {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    padding: 0 50px;
+    z-index: 99;
+    display: none;
+
+    .btn {
+      @include btn(sm, $primary-color, #eeeeee);
+    }
+
+    &.active .btn{
+      background-color: #eeeeee;
+      color: #333333;
+    }
+
+    @include md {
+      display: block;
+    }
+
+    @include xs {
+      padding: 0 10px;
+      top: 10px;
+      right: 0px;
+    }
+  }
+
+  .slideshow {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    animation: zoomin 14s ease-in-out infinite alternate;
+    overflow: hidden;
+
+    &-nav {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      padding-right: $container-padding;
+      z-index: 3;
+
+      .btn {
+        @include btn(md, $secondary-color, #eeeeee);
+      }
+
+      @include md {
+        top: auto;
+        bottom: 50px;
+        right: 0px;
+        padding: 0 50px;
+      }
+
+      @include xs {
+        padding: 0 10px;
+        bottom: 10px;
+        right: 0;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      max-width: 600px;
+      padding-right: $container-padding;
+      transform: translateY(-50%);
+      color: #ffffff;
+      text-align: right;
+      font-size: 28px;
+      z-index: 3;
+
+      .btn {
+        @include btn(md, #eeeeee, $primary-color);
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 20px 0;
+      }
+
+      @include md {
+        padding: 0 50px;
+        right: 0;
+      }
+
+      @include xs {
+        padding: 0 10px;
+        right: 0;
+      }
+    }
+
+    .slide-1 {
+      background-image: url("./images/slide_1.jpg");
+    }
+
+    .slide-2 {
+      background-image: url("./images/slide_2.jpg");
+    }
+
+    .slide-3 {
+      background-image: url("./images/slide_3.jpg");
+    }
+
+    .slides {
+      position: absolute;
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: all 2.1s ease-in-out;
+      filter: opacity(0.7);
+
+      &.active {
+        position: relative;
+        visibility: visible;
+        filter: opacity(1);
+      }
+    }
+  }
+}

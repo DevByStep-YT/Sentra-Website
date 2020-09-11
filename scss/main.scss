@@ -1,0 +1,67 @@
+@import "./animations";
+@import "./variables";
+@import "./reset";
+@import "./mixins";
+@import "./utils";
+
+@import './sections/header';
+@import './sections/sidebar';
+
+main {
+  margin-left: 300px;
+  padding-top: $container-padding;
+
+  @include md {
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  section {
+    padding: 30px $container-padding;
+
+    @include md {
+      padding: $container-padding-md;
+    }
+
+    @include xs {
+      padding: $container-padding-xs;
+    }
+  }
+
+  .section-title {
+    @include flex(flex-start, center);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    line-height: 1.5;
+
+    h1 {
+      margin-right: 100px;
+      font-size: 30px;
+
+      span {
+        display: block;
+        color: $primary-color;
+      }
+    }
+
+    p {
+      width: 300px;
+      font-size: 15px;
+    }
+  }
+
+  @import './sections/featured-places';
+
+  @import './sections/recent-projects';
+
+  @import './sections/company-presentation';
+
+  @import './sections/blog-entries';
+
+  @import './sections/google-maps';
+
+  @import './sections/contact-sentra';
+
+  @import './sections/footer';
+}
+

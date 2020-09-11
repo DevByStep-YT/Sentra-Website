@@ -1,0 +1,104 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  @include flex(space-between, center, column);
+  width: 300px;
+  height: 100vh;
+  background-color: $secondary-color;
+  color: #eeeeee;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all 0.3s ease-in-out;
+
+  @include md {
+    width: 0;
+  }
+
+  @include landscape {
+    flex-direction: row;
+
+    .logo {
+      width: 100%;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.open {
+    width: 260px;
+  }
+
+  .logo {
+    align-self: stretch;
+    padding: 20px;
+    background-color: $primary-color;
+
+    h1 {
+      padding: 25px;
+      border: 1px solid #eeeeee;
+      color: #eeeeee;
+      font-size: 26px;
+      font-weight: 100;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-menu {
+    padding: 40px;
+
+    li {
+      margin: 10px 0;
+      padding: 10px 0;
+      width: 180px;
+      @include flex(flex-start, center);
+
+      a {
+        color: #eeeeee;
+      }
+
+      &:hover .dot {
+        background-color: #eeeeee;
+      }
+
+      &:before {
+        display: inline-block;
+        content: "";
+        border-top: 1px solid #eeeeee;
+        width: 0;
+        margin-right: 10px;
+        transition: all 0.8s ease;
+        transform: translate(10px, 0);
+      }
+
+      &.active::before {
+        width: 40px;
+      }
+    }
+  }
+
+  &-social-links {
+    text-align: center;
+    padding: 20px;
+    white-space: nowrap;
+
+    i {
+      margin: 0 10px;
+      transition: all 0.4s ease;
+
+      &:hover {
+        color: $primary-color;
+        transform: scale(1.5);
+        cursor: pointer;
+      }
+    }
+  }
+}

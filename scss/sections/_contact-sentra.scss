@@ -1,0 +1,35 @@
+.contact-sentra {
+  margin: 50px 0;
+  
+  .contact-form {
+    @include grid(2, 20px);
+
+    @include xs {
+      @include grid(1);
+    }
+
+    input,
+    textarea {
+      margin-bottom: 10px;
+      padding: 15px;
+      background: #eeeeee;
+    }
+
+    textarea {
+      grid-area: 2 / 1 / 5 / 3;
+
+      @include xs {
+        grid-area: auto;
+      }
+    }
+
+    .btn {
+      grid-column: 1 / 3;
+      @include btn(md, $primary-color, #eeeeee);
+
+      @include xs {
+        grid-column: auto;
+      }
+    }
+  }
+}
