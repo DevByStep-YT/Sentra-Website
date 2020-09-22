@@ -2,34 +2,26 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 98;
+  z-index: 99;
   @include flex(space-between, center, column);
-  width: 300px;
+  width: 0;
   height: 100vh;
   background-color: $secondary-color;
-  color: #eeeeee;
+  color: #ffffff;
   overflow-x: hidden;
   overflow-y: scroll;
   transition: all 0.3s ease-in-out;
 
-  @include md {
-    width: 0;
-  }
-
-  @include landscape {
-    flex-direction: row;
-
-    .logo {
-      width: 100%;
-    }
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
+  @include lg {
+    width: 300px;
   }
 
   &.open {
     width: 260px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
   }
 
   .logo {
@@ -39,8 +31,8 @@
 
     h1 {
       padding: 25px;
-      border: 1px solid #eeeeee;
-      color: #eeeeee;
+      border: 1px solid #ffffff;
+      color: #ffffff;
       font-size: 26px;
       font-weight: 100;
       text-align: center;
@@ -62,20 +54,20 @@
       @include flex(flex-start, center);
 
       a {
-        color: #eeeeee;
+        color: #ffffff;
       }
 
       &:hover .dot {
-        background-color: #eeeeee;
+        background-color: #ffffff;
       }
 
       &:before {
         display: inline-block;
         content: "";
-        border-top: 1px solid #eeeeee;
+        border-top: 1px solid #ffffff;
         width: 0;
         margin-right: 10px;
-        transition: all 0.8s ease;
+        transition: all 0.8s ease-in-out;
         transform: translate(10px, 0);
       }
 
@@ -86,8 +78,8 @@
   }
 
   &-social-links {
-    text-align: center;
     padding: 20px;
+    text-align: center;
     white-space: nowrap;
 
     i {

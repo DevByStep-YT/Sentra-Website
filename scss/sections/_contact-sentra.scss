@@ -1,34 +1,34 @@
 .contact-sentra {
   margin: 50px 0;
-  
-  .contact-form {
-    @include grid(2, 20px);
 
-    @include xs {
-      @include grid(1);
+  .contact-form {
+    @include md {
+      @include grid(2, 20px);
     }
 
     input,
     textarea {
+      width: 100%;
       margin-bottom: 10px;
       padding: 15px;
       background: #eeeeee;
+      font-size: 20px;
     }
 
     textarea {
-      grid-area: 2 / 1 / 5 / 3;
-
-      @include xs {
-        grid-area: auto;
+      @include md {
+        grid-area: 2 / 1 / 5 / 3;
       }
     }
 
     .btn {
-      grid-column: 1 / 3;
-      @include btn(md, $primary-color, #eeeeee);
+      @include md {
+        grid-column: 1 / 3;
+      }
 
-      @include xs {
-        grid-column: auto;
+      &:hover {
+        background: #eeeeee;
+        color: #333333;
       }
     }
   }

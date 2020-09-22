@@ -1,30 +1,27 @@
-@import "./animations";
 @import "./variables";
 @import "./reset";
 @import "./mixins";
-@import "./utils";
+@import "./utilities";
+@import "./animations";
 
-@import './sections/header';
-@import './sections/sidebar';
+@import "./sections/header";
+@import "./sections/sidebar";
 
 main {
-  margin-left: 300px;
-  padding-top: $container-padding;
-
-  @include md {
-    margin-left: 0;
-    padding-top: 0;
+  @include lg {
+    margin-left: 300px;
+    padding-top: $container-padding-lg;
   }
 
   section {
-    padding: 30px $container-padding;
+    padding: $container-padding;
 
     @include md {
-      padding: $container-padding-md;
+      padding: 30px $container-padding-md;
     }
 
-    @include xs {
-      padding: $container-padding-xs;
+    @include lg {
+      padding: 30px $container-padding-lg;
     }
   }
 
@@ -50,18 +47,11 @@ main {
     }
   }
 
-  @import './sections/featured-places';
-
-  @import './sections/recent-projects';
-
-  @import './sections/company-presentation';
-
-  @import './sections/blog-entries';
-
-  @import './sections/google-maps';
-
-  @import './sections/contact-sentra';
-
-  @import './sections/footer';
+  @import "./sections/featured-places";
+  @import "./sections/recent-projects";
+  @import "./sections/company-presentation";
+  @import "./sections/blog-entries";
+  @import "./sections/google-maps";
+  @import "./sections/contact-sentra";
+  @import "./sections/footer";
 }
-

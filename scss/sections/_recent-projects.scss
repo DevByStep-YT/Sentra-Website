@@ -2,10 +2,10 @@
   margin: 30px 0;
 
   .grid-gallery {
-    @include grid(3, 20px);
+    @include grid(3, 5px);
 
-    @include xs {
-      grid-gap: 5px;
+    @include md {
+      grid-gap: 20px;
     }
 
     a:first-child {

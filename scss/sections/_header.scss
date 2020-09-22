@@ -7,27 +7,19 @@ header {
     position: fixed;
     top: 50px;
     right: 0px;
-    padding: 0 50px;
+    padding: 0 $container-padding;
     z-index: 99;
-    display: none;
-
-    .btn {
-      @include btn(sm, $primary-color, #eeeeee);
-    }
-
-    &.active .btn{
-      background-color: #eeeeee;
-      color: #333333;
-    }
 
     @include md {
-      display: block;
+      padding-right: $container-padding-md;
     }
 
-    @include xs {
-      padding: 0 10px;
-      top: 10px;
-      right: 0px;
+    @include lg {
+      display: none;
+    }
+
+    .btn {
+      padding: 10px 13px;
     }
   }
 
@@ -35,64 +27,58 @@ header {
     width: 100%;
     height: 100vh;
     position: relative;
-    animation: zoomin 14s ease-in-out infinite alternate;
     overflow: hidden;
+    animation: zoomin 13s ease-in-out infinite alternate;
 
     &-nav {
       position: absolute;
-      top: 50px;
+      bottom: $container-padding;
       right: 0;
+      z-index: 99;
       padding-right: $container-padding;
-      z-index: 3;
-
-      .btn {
-        @include btn(md, $secondary-color, #eeeeee);
-      }
 
       @include md {
-        top: auto;
-        bottom: 50px;
-        right: 0px;
-        padding: 0 50px;
+        padding-right: $container-padding-md;
       }
 
-      @include xs {
-        padding: 0 10px;
-        bottom: 10px;
-        right: 0;
+      @include lg {
+        top: $container-padding-lg;
+        padding-right: $container-padding-lg;
+      }
+
+      .btn {
+        padding: 15px 20px;
+
+        &:hover {
+          background-color: #ffffff;
+          color: $primary-color;
+        }
       }
     }
 
     &-info {
       position: absolute;
-      right: 0px;
+      right: 0;
       top: 50%;
+      transform: translateY(-50%);
       max-width: 600px;
       padding-right: $container-padding;
-      transform: translateY(-50%);
       color: #ffffff;
       text-align: right;
       font-size: 28px;
       z-index: 3;
 
-      .btn {
-        @include btn(md, #eeeeee, $primary-color);
-        font-size: 20px;
+      @include md {
+        padding-right: $container-padding-md;
+      }
+
+      @include lg {
+        padding-right: $container-padding-lg;
       }
 
       p {
         font-size: 18px;
         margin: 20px 0;
-      }
-
-      @include md {
-        padding: 0 50px;
-        right: 0;
-      }
-
-      @include xs {
-        padding: 0 10px;
-        right: 0;
       }
     }
 
@@ -110,14 +96,14 @@ header {
 
     .slides {
       position: absolute;
-      visibility: hidden;
       width: 100%;
       height: 100%;
+      visibility: hidden;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      transition: all 2.1s ease-in-out;
       filter: opacity(0.7);
+      transition: all 2.1s ease-in-out;
 
       &.active {
         position: relative;

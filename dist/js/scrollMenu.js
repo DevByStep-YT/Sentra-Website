@@ -5,11 +5,8 @@ let allSections = [
 
 let sidebarItems = document.querySelectorAll(".sidebar-menu li");
 
-let removeAllActive = () =>
-  sidebarItems.forEach((item) => item.classList.remove("active"));
-
 function setActive(element) {
-  removeAllActive();
+  sidebarItems.forEach((item) => item.classList.remove("active"));
 
   element.classList.add("active");
 }
@@ -35,10 +32,13 @@ function changeActiveMenu() {
   });
 }
 
-//change active menu on click
-sidebarItems.forEach((item) =>
-  item.addEventListener("click", () => setActive(item))
-);
+// Change active menu on click
+sidebarItems.forEach((item) => {
+  item.addEventListener("click", () => setActive(item));
+});
 
-//change active menu on scroll
+// Change active menu on scroll
 window.addEventListener("scroll", _.throttle(changeActiveMenu, 150));
+
+// It's a good practice to use debounce or throttle on scroll events
+// we will use lodash for this

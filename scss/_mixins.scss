@@ -1,38 +1,39 @@
-// EXTRA SMALL DEVICES
-@mixin xs {
-  @media (max-width: #{$screen-xs-max}) {
-    @content;
-  }
-}
-
 // SMALL DEVICES
 @mixin sm {
-  @media (max-width: #{$screen-sm-max}) {
+  @media (min-width: #{$screen-sm-min}) {
     @content;
   }
 }
 
 // MEDIUM DEVICES
 @mixin md {
-  @media (max-width: #{$screen-md-max}) {
+  @media (min-width: #{$screen-md-min}) {
     @content;
   }
 }
 
 // LARGE DEVICES
 @mixin lg {
-  @media (max-width: #{$screen-lg-max}) {
+  @media (min-width: #{$screen-lg-min}) {
     @content;
   }
 }
 
-@mixin landscape {
-  @media only screen and (orientation: landscape) and (max-width: #{$screen-md-max}) {
+// EXTRA LARGE DEVICES
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
     @content;
   }
 }
 
-// FLEXBOX
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}
+
+/* FLEXBOX MIXINS */
 
 @mixin flex($justify, $align: center, $direction: row, $wrap: wrap) {
   display: flex;
@@ -42,41 +43,10 @@
   flex-wrap: $wrap;
 }
 
-// CSS GRID MIXINS
+/* CSS GRID MIXINS */
 
-@mixin grid($columns, $gap: 0px) {
+@mixin grid($columns, $gap: 0) {
   display: grid;
-  grid-gap: $gap;
+  gap: $gap;
   grid-template-columns: repeat($columns, 1fr);
-}
-
-@mixin btn(
-  $size,
-  $bgColor,
-  $color,
-  $hoverColor: #eeeeee,
-  $display: inline-block,
-  $borderRadius: 0
-) {
-  display: $display;
-  background-color: $bgColor;
-  color: $color;
-  border-radius: $borderRadius;
-  text-align: center;
-  cursor: pointer;
-
-  @if $size == sm {
-    padding: 7px 12px;
-  } @else if $size == md {
-    padding: 12px 18px;
-  } @else if $size == lg {
-    padding: 20px 25px;
-  } @else {
-    padding: 7px 12px;
-  }
-
-  &:hover {
-    background-color: $hoverColor;
-    color: #333333;
-  }
 }

@@ -1,23 +1,18 @@
 .featured-places {
   .featured-items {
-    @include grid(3, 40px);
     margin: 30px 0;
 
     @include md {
       @include grid(2, 30px);
     }
 
-    @include xs {
-      @include grid(1);
+    @include xl {
+      @include grid(3, 40px);
     }
 
     .item {
       margin-bottom: 10px;
-
-      @include xs {
-        border-bottom: 1px solid #eeeeee;
-        padding: 10px 0;
-      }
+      border-bottom: 1px solid #eeeeee;
 
       .image {
         position: relative;
@@ -25,16 +20,15 @@
 
         .btn {
           position: absolute;
-          bottom: 6px;
+          bottom: 2px;
           left: 0;
           width: 100%;
           margin-bottom: -35px;
-          transition: margin 0.4s ease-in-out;
-          @include btn(sm, $primary-color, #ffffff);
+          transition: margin 0.4s ease;
         }
 
         &:hover .btn {
-          margin: -10px 0;
+          margin: -2px 0;
         }
       }
 

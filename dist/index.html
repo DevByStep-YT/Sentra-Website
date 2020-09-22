@@ -3,40 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <title>Sentra Website</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
     <link rel="stylesheet" href="./css/lightbox.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
   </head>
   <body>
     <header id="home">
       <div class="slideshow-nav">
-        <div class="btn prev"><i class="fas fa-chevron-left"></i></div>
-        <div class="btn next"><i class="fas fa-chevron-right"></i></div>
+        <div class="btn secondary prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="btn secondary next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
       </div>
       <div class="menu-toggle">
-        <div class="btn"><i class="fas fa-bars"></i></div>
+        <div class="btn primary"><i class="fas fa-bars"></i></div>
       </div>
       <div class="slideshow-info">
         <h1>Beautiful Template Sentra</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ab nulla
-          doloremque! Rerum!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+          asperiores rerum sint?
         </p>
-        <div class="btn">More</div>
+        <div class="btn primary">More</div>
       </div>
       <div class="slideshow">
-        <div class="slides slide-1 active container"></div>
-
-        <div class="slides slide-2 container"></div>
-
-        <div class="slides slide-3 container"></div>
+        <div class="slides slide-1 active"></div>
+        <div class="slides slide-2"></div>
+        <div class="slides slide-3"></div>
       </div>
     </header>
 
@@ -46,13 +48,13 @@
       </div>
       <ul class="sidebar-menu">
         <li class="active">
-          <span class="dot"></span> <a href="#home">Home</a>
+          <span class="dot"></span><a href="#home">Home</a>
         </li>
         <li>
-          <span class="dot"></span> <a href="#featured-places">Featured</a>
+          <span class="dot"></span><a href="#featured-places">Featured</a>
         </li>
         <li>
-          <span class="dot"></span> <a href="#recent-projects">Recent Work</a>
+          <span class="dot"></span><a href="#recent-projects">Recent Work</a>
         </li>
         <li>
           <span class="dot"></span>
@@ -61,9 +63,7 @@
         <li>
           <span class="dot"></span> <a href="#blog-entries">Blog Entries</a>
         </li>
-        <li>
-          <span class="dot"></span> <a href="#contact-sentra">Contact Us</a>
-        </li>
+        <li><span class="dot"> </span><a href="#contact-sentra">Contact Us</a></li>
       </ul>
       <div class="sidebar-social-links">
         <i class="fab fa-facebook"></i>
@@ -72,55 +72,59 @@
         <i class="fab fa-behance"></i>
       </div>
     </aside>
+
     <main>
       <section id="featured-places" class="featured-places">
         <div class="section-title">
           <h1>Featured <span>Places</span></h1>
           <p>
-            Praesent pellentesque efficitur magna, sed pellentesque neque
-            malesuada vitae.
+            Praesent pellentesque efficitur magna, sed pellesentesque neque
+            malesuada vitae
           </p>
         </div>
         <div class="featured-items">
           <div class="item">
             <div class="image">
               <img src="./css/images/featured_1.jpg" alt="item1" />
-              <div class="btn">Read</div>
+              <div class="btn primary">Read</div>
             </div>
-            <h4>Lorem ipsum dolor</h4>
+            <h4>Lorem, ipsum dolor.</h4>
             <span>Proin et sapien</span>
             <p>
-              #1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit neque unde, suscipit ad est quia itaque quibusdam
-              dolore id aliquam sunt necessitatibus modi. Dicta, labore.
+              #1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus inventore, magni perspiciatis ullam odit harum
+              aperiam nulla earum magnam beatae, consequuntur molestias eveniet?
+              Placeat, similique?
             </p>
           </div>
 
           <div class="item">
             <div class="image">
               <img src="./css/images/featured_2.jpg" alt="item2" />
-              <div class="btn">Read</div>
+              <div class="btn primary">Read</div>
             </div>
-            <h4>Lorem ipsum dolor</h4>
+            <h4>Lorem, ipsum dolor.</h4>
             <span>Proin et sapien</span>
             <p>
-              #1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit neque unde, suscipit ad est quia itaque quibusdam
-              dolore id aliquam sunt necessitatibus modi. Dicta, labore.
+              #2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus inventore, magni perspiciatis ullam odit harum
+              aperiam nulla earum magnam beatae, consequuntur molestias eveniet?
+              Placeat, similique?
             </p>
           </div>
 
           <div class="item">
             <div class="image">
               <img src="./css/images/featured_3.jpg" alt="item3" />
-              <div class="btn">Read</div>
+              <div class="btn primary">Read</div>
             </div>
-            <h4>Lorem ipsum dolor</h4>
+            <h4>Lorem, ipsum dolor.</h4>
             <span>Proin et sapien</span>
             <p>
-              #1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit neque unde, suscipit ad est quia itaque quibusdam
-              dolore id aliquam sunt necessitatibus modi. Dicta, labore.
+              #3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus inventore, magni perspiciatis ullam odit harum
+              aperiam nulla earum magnam beatae, consequuntur molestias eveniet?
+              Placeat, similique?
             </p>
           </div>
         </div>
@@ -130,31 +134,28 @@
         <div class="section-title">
           <h1>Recent <span>Projects</span></h1>
           <p>
-            Praesent pellentesque efficitur magna, sed pellentesque neque
-            malesuada vitae.
+            Praesent pellentesque efficitur magna, sed pellesentesque neque
+            malesuada vitae
           </p>
         </div>
 
         <div class="grid-gallery">
-          <a href="./css/images/portfolio_1.jpg" data-lightbox="example-set"
-            ><img src="./css/images/portfolio_1.jpg" alt="portfolio_1"
-          /></a>
+          <a href="./css/images/portfolio_1.jpg" data-lightbox="example-set">
+            <img src="./css/images/portfolio_1.jpg" alt="portfolio_1" />
+          </a>
 
-          <a href="./css/images/portfolio_2.jpg" data-lightbox="example-set"
-            ><img src="./css/images/portfolio_2.jpg" alt="portfolio_2"
-          /></a>
-
-          <a href="./css/images/portfolio_3.jpg" data-lightbox="example-set"
-            ><img src="./css/images/portfolio_3.jpg" alt="portfolio_3"
-          /></a>
-
-          <a href="./css/images/portfolio_4.jpg" data-lightbox="example-set"
-            ><img src="./css/images/portfolio_4.jpg" alt="portfolio_4"
-          /></a>
-
-          <a href="./css/images/portfolio_5.jpg" data-lightbox="example-set"
-            ><img src="./css/images/portfolio_5.jpg" alt="portfolio_5"
-          /></a>
+          <a href="./css/images/portfolio_2.jpg" data-lightbox="example-set">
+            <img src="./css/images/portfolio_2.jpg" alt="portfolio_2" />
+          </a>
+          <a href="./css/images/portfolio_3.jpg" data-lightbox="example-set">
+            <img src="./css/images/portfolio_3.jpg" alt="portfolio_3" />
+          </a>
+          <a href="./css/images/portfolio_4.jpg" data-lightbox="example-set">
+            <img src="./css/images/portfolio_4.jpg" alt="portfolio_4" />
+          </a>
+          <a href="./css/images/portfolio_5.jpg" data-lightbox="example-set">
+            <img src="./css/images/portfolio_5.jpg" alt="portfolio_5" />
+          </a>
         </div>
       </section>
 
@@ -162,17 +163,17 @@
         <div class="section-title">
           <h1>Company <span>Presentation</span></h1>
           <p>
-            Praesent pellentesque efficitur magna, sed pellentesque neque
-            malesuada vitae.
+            Praesent pellentesque efficitur magna, sed pellesentesque neque
+            malesuada vitae
           </p>
         </div>
 
         <div class="video-box">
           <iframe
-            width="100%"
-            height="100%"
             src="https://www.youtube.com/embed/7BGozAt0Yho"
             frameborder="0"
+            width="100%"
+            height="100%"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -180,18 +181,14 @@
 
         <div class="presentation-info">
           <p class="presentation-text">
-            In eget ipsum sed lorem vehicula luctus. Curabitur non dolor
-            rhoncus, hendrerit justo sit amet, vestibulum turpis. Pellentesque
-            id auctor tellus, vel ultricies augue. Duis condimentum aliquet
-            blandit. Fusce rhoncus et eros ut pharetra. Phasellus convallis
-            ultricies ligula ac gravida.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            sit maxime illo, deserunt hic rem ullam doloribus ut officia, minima
+            possimus alias numquam reiciendis perferendis quidem exercitationem
+            suscipit deleniti esse consequuntur excepturi, sunt veniam. Incidunt
+            nesciunt voluptatem amet corporis odio ab unde ratione et sapiente?
+            Temporibus voluptatum blanditiis earum nisi?
           </p>
-          <a
-            class="btn"
-            href="https://www.youtube.com/channel/UCxqAhrjvgmyuy3p7YvQOENA"
-            target="_blank"
-            >Continue Reading</a
-          >
+          <a href="#" class="btn primary">Continue Reading</a>
         </div>
       </section>
 
@@ -199,8 +196,8 @@
         <div class="section-title">
           <h1>Blog <span>Entries</span></h1>
           <p>
-            Curabitur hendrerit mauris mollis ipsum vulputate rutrum. Phasellus
-            luctus odio eget dui imperdiet.
+            Praesent pellentesque efficitur magna, sed pellesentesque neque
+            malesuada vitae
           </p>
         </div>
 
@@ -225,27 +222,29 @@
                   <h3>Integer ultrices augue</h3>
                   <h4>25 July 2020</h4>
                   <p>
-                    Nam vel egestas nisi. Nullam lobortis magna at enim
-                    venenatis luctus. Nam finibus, mauris eu dictum iaculis,
-                    dolor tortor cursus quam, in volutpat augue lectus sed
-                    magna. Integer mollis lorem quis ipsum maximus finibus.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Officiis magnam assumenda necessitatibus quo minus, cumque
+                    nihil voluptates vitae ipsum culpa, voluptatem ullam
+                    consequatur saepe iure praesentium corporis! Culpa
+                    blanditiis minima ut possimus eaque delectus odio.
                   </p>
-                  <div class="btn">Continue Reading</div>
+                  <div class="btn primary">Continue Reading</div>
                 </div>
               </div>
 
               <div class="blog-item">
                 <img src="./css/images/blog_2.jpg" alt="blog_2" />
                 <div class="blog-item-info">
-                  <h3>Lorem ipsum augue</h3>
+                  <h3>Lorem, ipsum dolor.</h3>
                   <h4>20 July 2020</h4>
                   <p>
-                    Nam vel egestas nisi. Nullam lobortis magna at enim
-                    venenatis luctus. Nam finibus, mauris eu dictum iaculis,
-                    dolor tortor cursus quam, in volutpat augue lectus sed
-                    magna. Integer mollis lorem quis ipsum maximus finibus.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Officiis magnam assumenda necessitatibus quo minus, cumque
+                    nihil voluptates vitae ipsum culpa, voluptatem ullam
+                    consequatur saepe iure praesentium corporis! Culpa
+                    blanditiis minima ut possimus eaque delectus odio.
                   </p>
-                  <div class="btn">Continue Reading</div>
+                  <div class="btn primary">Continue Reading</div>
                 </div>
               </div>
 
@@ -255,44 +254,47 @@
                   <h3>Cras commodo odio ut</h3>
                   <h4>10 July 2020</h4>
                   <p>
-                    Nam vel egestas nisi. Nullam lobortis magna at enim
-                    venenatis luctus. Nam finibus, mauris eu dictum iaculis,
-                    dolor tortor cursus quam, in volutpat augue lectus sed
-                    magna. Integer mollis lorem quis ipsum maximus finibus.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Officiis magnam assumenda necessitatibus quo minus, cumque
+                    nihil voluptates vitae ipsum culpa, voluptatem ullam
+                    consequatur saepe iure praesentium corporis! Culpa
+                    blanditiis minima ut possimus eaque delectus odio.
                   </p>
-                  <div class="btn">Continue Reading</div>
+                  <div class="btn primary">Continue Reading</div>
                 </div>
               </div>
             </div>
 
             <div id="june" class="tabcontent">
               <div class="blog-item">
-                <img src="./css/images/blog_3.jpg" alt="blog_3" />
+                <img src="./css/images/blog_2.jpg" alt="blog_2" />
                 <div class="blog-item-info">
-                  <h3>Ultrices augue sum</h3>
-                  <h4>25 June 2020</h4>
+                  <h3>Cras, ipsum dolor.</h3>
+                  <h4>22 June 2020</h4>
                   <p>
-                    Nam vel egestas nisi. Nullam lobortis magna at enim
-                    venenatis luctus. Nam finibus, mauris eu dictum iaculis,
-                    dolor tortor cursus quam, in volutpat augue lectus sed
-                    magna. Integer mollis lorem quis ipsum maximus finibus.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Officiis magnam assumenda necessitatibus quo minus, cumque
+                    nihil voluptates vitae ipsum culpa, voluptatem ullam
+                    consequatur saepe iure praesentium corporis! Culpa
+                    blanditiis minima ut possimus eaque delectus odio.
                   </p>
-                  <div class="btn">Continue Reading</div>
+                  <div class="btn primary">Continue Reading</div>
                 </div>
               </div>
 
               <div class="blog-item">
-                <img src="./css/images/blog_1.jpg" alt="blog_1" />
+                <img src="./css/images/blog_3.jpg" alt="blog_3" />
                 <div class="blog-item-info">
-                  <h3>Lorem ipsum dolor</h3>
-                  <h4>20 June 2020</h4>
+                  <h3>Cras commodo odio ut</h3>
+                  <h4>15 June 2020</h4>
                   <p>
-                    Nam vel egestas nisi. Nullam lobortis magna at enim
-                    venenatis luctus. Nam finibus, mauris eu dictum iaculis,
-                    dolor tortor cursus quam, in volutpat augue lectus sed
-                    magna. Integer mollis lorem quis ipsum maximus finibus.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Officiis magnam assumenda necessitatibus quo minus, cumque
+                    nihil voluptates vitae ipsum culpa, voluptatem ullam
+                    consequatur saepe iure praesentium corporis! Culpa
+                    blanditiis minima ut possimus eaque delectus odio.
                   </p>
-                  <div class="btn">Continue Reading</div>
+                  <div class="btn primary">Continue Reading</div>
                 </div>
               </div>
             </div>
@@ -301,15 +303,16 @@
               <div class="blog-item">
                 <img src="./css/images/blog_2.jpg" alt="blog_2" />
                 <div class="blog-item-info">
-                  <h3>Lorem ipsum dolor</h3>
-                  <h4>20 May 2020</h4>
+                  <h3>Lorem, ipsum dolor.</h3>
+                  <h4>14 May 2020</h4>
                   <p>
-                    Nam vel egestas nisi. Nullam lobortis magna at enim
-                    venenatis luctus. Nam finibus, mauris eu dictum iaculis,
-                    dolor tortor cursus quam, in volutpat augue lectus sed
-                    magna. Integer mollis lorem quis ipsum maximus finibus.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Officiis magnam assumenda necessitatibus quo minus, cumque
+                    nihil voluptates vitae ipsum culpa, voluptatem ullam
+                    consequatur saepe iure praesentium corporis! Culpa
+                    blanditiis minima ut possimus eaque delectus odio.
                   </p>
-                  <div class="btn">Continue Reading</div>
+                  <div class="btn primary">Continue Reading</div>
                 </div>
               </div>
             </div>
@@ -317,21 +320,32 @@
         </div>
       </section>
 
-      <section id="map" class="google-maps"></section>
+      <section id="map" class="google-maps">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617356072715!2d-73.98785308471938!3d40.748444543322314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sba!4v1600795442004!5m2!1sen!2sba"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </section>
 
       <section id="contact-sentra" class="contact-sentra">
         <div class="section-title">
           <h1>Contact <span>Sentra</span></h1>
           <p>
-            Curabitur hendrerit mauris mollis ipsum vulputate rutrum. Phasellus
-            luctus odio eget dui imperdiet.
+            Praesent pellentesque efficitur magna, sed pellesentesque neque
+            malesuada vitae
           </p>
         </div>
         <form class="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
           <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
-          <a href="#" class="btn">Send Message Now</a>
+          <a href="#" class="btn primary">Send Message</a>
         </form>
       </section>
 
@@ -340,17 +354,11 @@
       </section>
     </main>
 
-    <script src="./js/sidebar.js"></script>
     <script src="./js/slideshow.js"></script>
+    <script src="./js/sidebar.js"></script>
     <script src="./js/tabs.js"></script>
     <script src="./js/scrollMenu.js"></script>
+    <script src="./js/lightbox.min.js"></script>
     <script src="./js/lightbox-plus-jquery.min.js"></script>
-    <script src="./js/googleMaps.js"></script>
-
-    <!--Load the API from the specified URL-->
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz6m0GwKQ0tMin7ryXrPlQO6DwFbH8zlI&callback=initMap"
-    ></script>
   </body>
 </html>
